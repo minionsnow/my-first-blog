@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Results</title>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    </head>
+    <body class="text-center">
+        <button class="btn btn-lg btn-primary btn-block" onclick="location.href='{% url 'script' %}'">Run</button><hr>
+        {% if data %}
+        {{data|safe}}
+        {% endif %}
+        <button class="btn btn-lg btn-primary btn-block" onclick="location.href='{% url 'summary' %}'">Summary</button>
+        <br/>
+        <button class="btn btn-lg btn-primary btn-block" onclick="location.href='{% url 'home' %}'">Home</button>
+        </body>
+</html>
